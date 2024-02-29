@@ -1,11 +1,7 @@
 <template>
-    <div>
-      
-      <NuxtLayout>
-      <NuxtPage></NuxtPage>
-     </NuxtLayout>
-    </div>
-  </template>
-  <script setup>
-  </script>
-  
+  <div>
+      <web-header/>
+      <slot/>
+      <web-footer/>
+  </div>
+</template>
