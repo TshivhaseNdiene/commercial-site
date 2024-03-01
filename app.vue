@@ -1,7 +1,9 @@
 <template>
   <div>
-      <web-header/>
-      <slot/>
-      <web-footer/>
+    <NuxtLayout>
+    <NuxtPage></NuxtPage>
+   </NuxtLayout>
   </div>
 </template>
+<script setup>
+</script>
