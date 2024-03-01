@@ -69,7 +69,7 @@
                     </svg>
                   </button>
                   <div class="flex items-center justify-center flex-grow">
-                    <a href="#" class="hidden md:block lg:block xl:block font-serif text-lg">Ndiene</a>
+                    <a href="#" class="hidden md:block lg:block xl:block font-serif font-bold text-lg">FootFlair</a>
                   </div>
                   <!-- Right side: Cart and Search icons -->
                   <div class="flex items-center space-x-4">
