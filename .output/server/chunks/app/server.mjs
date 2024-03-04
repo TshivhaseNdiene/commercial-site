@@ -3,7 +3,7 @@ import { d as useRuntimeConfig$1, $ as $fetch, w as withQuery, l as hasProtocol,
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { useRoute as useRoute$1, RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
+import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs } from 'vue/server-renderer';
 import 'node:http';
 import 'node:https';
 import 'fs';
@@ -127,7 +127,7 @@ function createNuxtApp(options) {
     globalName: "nuxt",
     versions: {
       get nuxt() {
-        return "3.10.3";
+        return "3.10.2";
       },
       get vue() {
         return nuxtApp.vueApp.version;
@@ -624,12 +624,60 @@ function toArray(value) {
 }
 const _routes = [
   {
+    name: "about",
+    path: "/about",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/about-aSl4LjU2.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "dynamic",
+    path: "/dynamic",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/dynamic-m2c36o5S.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "home",
+    path: "/home",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/home-cCRGz18C.mjs').then((m) => m.default || m)
+  },
+  {
     name: "index",
     path: "/",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./_nuxt/index-dLfjRsdU.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-fjfh6FNc.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "ourwork",
+    path: "/ourwork",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/ourwork-J9f5K9Xf.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "programs",
+    path: "/programs",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/programs-lifOKcrE.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "services",
+    path: "/services",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./_nuxt/services-zngX1ja7.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -685,13 +733,12 @@ const routerOptions0 = {
       if (to.hash) {
         return { el: to.hash, top: _getHashElementScrollMarginTop(to.hash), behavior };
       }
-      return false;
     }
     const hasTransition = (route) => !!(route.meta.pageTransition ?? appPageTransition);
     const hookToWait = hasTransition(from) && hasTransition(to) ? "page:transition:finish" : "page:finish";
     return new Promise((resolve) => {
       nuxtApp.hooks.hookOnce(hookToWait, async () => {
-        await new Promise((resolve2) => setTimeout(resolve2, 0));
+        await nextTick();
         if (to.hash) {
           position = { el: to.hash, top: _getHashElementScrollMarginTop(to.hash), behavior };
         }
@@ -896,12 +943,10 @@ const plugin = /* @__PURE__ */ defineNuxtPlugin({
     });
     nuxtApp.hooks.hookOnce("app:created", async () => {
       try {
-        const to = router.resolve(initialURL);
-        if ("name" in to) {
-          to.name = void 0;
-        }
         await router.replace({
-          ...to,
+          ...router.resolve(initialURL),
+          name: void 0,
+          // #4920, #4982
           force: true
         });
         router.options.scrollBehavior = routerOptions.scrollBehavior;
@@ -937,13 +982,18 @@ const revive_payload_server_eJ33V7gbc6 = /* @__PURE__ */ defineNuxtPlugin({
 const components_plugin_KR1HBZs4kY = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:global-components"
 });
+const vue_scrollto_xDhf1FIwhg = () => {
+};
 const plugins = [
   unhead_KgADcZ0jPj,
   plugin,
   revive_payload_server_eJ33V7gbc6,
-  components_plugin_KR1HBZs4kY
+  components_plugin_KR1HBZs4kY,
+  vue_scrollto_xDhf1FIwhg
 ];
-const layouts = {};
+const layouts = {
+  default: () => import('./_nuxt/default-_cItKsFU.mjs').then((m) => m.default || m)
+};
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
   inheritAttrs: false,
@@ -1195,7 +1245,8 @@ const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLayout = __nuxt_component_0;
   const _component_NuxtPage = __nuxt_component_1;
-  _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
+  _push(`<div${ssrRenderAttrs(_attrs)}>`);
+  _push(ssrRenderComponent(_component_NuxtLayout, null, {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(ssrRenderComponent(_component_NuxtPage, null, null, _parent2, _scopeId));
@@ -1207,11 +1258,12 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
     }),
     _: 1
   }, _parent));
+  _push(`</div>`);
 }
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("node_modules/nuxt/dist/pages/runtime/app.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("app.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender]]);
@@ -1236,7 +1288,7 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./_nuxt/error-404-HlsRNX91.mjs').then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import('./_nuxt/error-404-fSSw7nV8.mjs').then((r) => r.default || r));
     const _Error = defineAsyncComponent(() => import('./_nuxt/error-500-zpvwru4s.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
