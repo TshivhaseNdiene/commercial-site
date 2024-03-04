@@ -12,9 +12,10 @@
       <svg class="w-6 h-6 text-gray-700 hover:text-gray-900 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18M3 8h18m-15 4h15M3 16h18"></path>
       </svg>
+      FLTER
 
       <!-- Filter Options -->
-      <div class="flex hidden space-x-4 ml-4">
+      <div class="hidden space-x-4 ml-4">
         <button class="text-gray-700 hover:text-gray-900 font-semibold">All</button>
         <button class="text-gray-700 hover:text-gray-900 font-semibold">Category 1</button>
         <button class="text-gray-700 hover:text-gray-900 font-semibold">Category 2</button>
@@ -24,7 +25,7 @@
 
     <!-- Dropdown with Sorting Options -->
     <div class="relative">
-      <button class="text-gray-700 hover:text-gray-900 font-semibold">Sort By</button>
+      <button class="text-gray-700 hover:text-gray-900 font-serif border border-l">Default Sorting</button>
       <div class="absolute z-10 mt-2 bg-white border rounded-md shadow-lg hidden">
         <ul class="py-1">
           <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 1</a></li>
@@ -101,7 +102,13 @@
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐</div>
           </div>
         </div>
+        <div class="flex justify-center flex-col w-full sm:w-auto sm:flex-row p-4">
+          <a href="" class="flex items-center justify-center w-full px-2 py-2 text-sm font-bold leading-6 capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-green-300 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-6 border-text  hover:shadow-lg hover:-translate-y-1">
+            View all Products
+          </a>
+        </div>
       </div>
+
     </section>
   </template>
   
