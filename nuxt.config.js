@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         autoprefixer: {},
       },
       router: {
-        base: '/commercial-site/'
+        base: '/' // Adjust this to match your repository name
       }
     },
     plugins: ["~/plugins/preline.client.ts"],
