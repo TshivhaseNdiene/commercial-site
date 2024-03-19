@@ -2,7 +2,7 @@
     <section>
       <div class="container mx-auto mt-8">
         <div class="mt-5 mb-10">
-          <h4 class="text-6xl mb-3 font-serif text-gray-700 capitalize  md:text-5xl text-center">Our Collections</h4>
+          <h4 class="text-6xl mb-3 text-gray-700 capitalize  md:text-5xl text-center">Our Collections</h4>
           <p class="text-center">Lorem ipsum dolor sit amet, ut aliquip ex ea commodo consequat</p>
         </div>
         <div class="py-5 mb-10">
@@ -17,12 +17,11 @@
       <!-- Filter Options -->
       <div class="hidden space-x-4 ml-4">
         <button class="text-gray-700 hover:text-gray-900 font-semibold">All</button>
-        <button class="text-gray-700 hover:text-gray-900 font-semibold">Category 1</button>
-        <button class="text-gray-700 hover:text-gray-900 font-semibold">Category 2</button>
+        <button class="text-gray-700 hover:text-gray-900 font-semibold">Price</button>
+        <button class="text-gray-700 hover:text-gray-900 font-semibold">Latest</button>
         <!-- Add more filter options as needed -->
       </div>
     </div>
-
     <!-- Dropdown with Sorting Options -->
     <div class="relative">
       <button class="text-gray-700 hover:text-gray-900 font-serif border border-l">Default Sorting</button>
@@ -58,7 +57,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_9.png" alt="Product 3" class="w-full h-48 object-contain mb-4">
             <div class="font-semibold mb-2">Product 3</div>
-            <div class="text-[#3dbbb5] font-semibold">$49.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2500.99</div>
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</div>
           </div>
   
@@ -66,7 +65,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_4.png" alt="Product 4" class="w-full h-48 object-contain mb-4">
             <div class="font-semibold mb-2">Product 4</div>
-            <div class="text-[#3dbbb5] font-semibold">$59.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2900.99</div>
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐</div>
           </div>
   
@@ -74,7 +73,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_5.png" alt="Product 5" class="w-full h-48 object-contain mb-4">
             <div class="font-semibold mb-2">Product 5</div>
-            <div class="text-[#3dbbb5] font-semibold">$29.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2900.99</div>
             <div class="text-yellow-300 mb-2">⭐⭐⭐⭐⭐</div>
           </div>
   
@@ -82,7 +81,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_6.png" alt="Product 6" class="w-full h-48 object-contain mb-4">
             <div class="font-semibold mb-2">Product 6</div>
-            <div class="text-[#3dbbb5] font-semibold">$39.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2299.99</div>
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐</div>
           </div>
   
@@ -90,7 +89,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_11.png" alt="Product 7" class="w-full h-48 object-contain mb-4">
             <div class="font-semibold mb-2">Product 7</div>
-            <div class="text-[#3dbbb5] font-semibold">$49.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2499.99</div>
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</div>
           </div>
   
@@ -98,7 +97,7 @@
           <div class="bg-white p-6 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
             <img src="../assets/img/img_8.png" alt="Product 8" class="w-full h-48 object-contain mb-4">
             <div class=" font-semibold mb-2">Product 8</div>
-            <div class="text-[#3dbbb5] font-semibold">$59.99</div>
+            <div class="text-[#3dbbb5] font-semibold">$2599.99</div>
             <div class="text-yellow-500 mb-2">⭐⭐⭐⭐</div>
           </div>
         </div>

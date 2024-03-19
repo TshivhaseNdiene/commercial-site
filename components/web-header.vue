@@ -1,17 +1,17 @@
 <template>
-  <header class="z-50 flex w-full flex-wrap bg-white pb-10 text-base sm:flex-col sm:pb-0 fixed top-0">
+  <header class="z-50  flex w-full bg-white pb-0 text-base sm:flex-col sm:pb-0 top-0">
     <!-- Topbar -->
     <div class="bg-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-3">
-        <div class="flex flex-col sm:flex-row justify-between items-center py-2w-full border-b shadow-md dark:border-gray-50">
+      <div class="container mx-5 px-4 sm:px-6 lg:px-8 mt-3">
+        <div class="flex  sm:flex-row justify-between items-center py-2w-full">
           <!-- Left side: Free Shipping message -->
-          <p class="text-xs md:text-sm font-serif mb-2 sm:mb-0">Free shipping on orders over R1000</p>
+          <p class="text-xs md:text-sm mb-2 sm:mb-0">Free shipping on orders over R1000</p>
 
           <!-- Right side: Language, Currency, and Login buttons -->
-          <div class="flex items-center space-x-4">
+          <div class="flex flex-row items-center space-x-4">
             <!-- Language dropdown -->
             <div class="relative" @click="toggleDropdown('language')">
-              <button type="button" class="flex items-center border-r border-gray-300 pr-2 font-serif text-black hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
+              <button type="button" class="flex items-center border-r border-gray-300 pr-2 text-black hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
                 <svg class="mr-1 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
@@ -29,7 +29,7 @@
 
             <!-- Currency dropdown -->
             <div class="relative" @click="toggleDropdown('currency')">
-              <button type="button" id="currencyButton" class="flex items-center border-r border-gray-300 pr-2 font-serif text-black hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
+              <button type="button" id="currencyButton" class="flex items-center border-r border-gray-300 pr-2 text-black hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
                 <svg class="mr-1 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
@@ -46,7 +46,7 @@
 
             <!-- Login dropdown -->
             <div class="relative" @click="toggleDropdown('login')">
-              <button type="button" class="flex items-center font-serif text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
+              <button type="button" class="flex items-center text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
                 <svg class="mr-1 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
@@ -63,21 +63,20 @@
         </div>
 
         <!-- Bottom bar -->
-        <div class="flex justify-between items-center py-2 mt-2 md:mt-8 mb-8">
+        <div class="flex justify-between items-center  md:mt-5 mb-5">
           <button class="text-gray-600 hover:text-gray-300 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
           <div class="flex items-center justify-center flex-grow">
-  <a href="#" class="font-serif font-bold text-lg md:hidden">FootFlair</a>
-  <a href="#" class="font-serif font-bold text-lg hidden md:block lg:block xl:block">FootFlair</a>
+  <a href="#" class=" font-bold text-[25px]  md:block lg:block xl:block">FootFlair</a>
 </div>
 
           <!-- Right side: Cart and Search icons -->
           <div class="flex items-center space-x-4">
             <!-- Cart Icon -->
-            <a href="#" class="flex items-center font-serif text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
+            <a href="#" class="flex items-center text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
               <svg class="mr-1 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
               </svg>
@@ -85,7 +84,7 @@
             </a>
 
             <!-- Search Icon -->
-            <a href="#" class="flex items-center font-serif text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
+            <a href="#" class="flex items-center text-gray-800 hover:text-gray-500 dark:hover:text-gray-400 text-xs md:text-sm">
               <svg class="mr-1 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
