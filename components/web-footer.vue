@@ -1,12 +1,9 @@
 <template>
-    <footer class="w-full border-t border-gray-200 dark:border-gray-700">
+    <footer class="w-full border-t">
       <!-- Grid -->
       <div class="mx-auto grid max-w-screen-xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 md:grid-cols-4 lg:grid-cols-5 lg:px-8">
-        <!-- End Col -->
-  
         <div>
           <h4 class="font-serif text-xs font-extrabold uppercase text-gray-900 dark:text-gray-800">Company</h4>
-  
           <div class="mt-3 grid space-y-3 text-sm font-thin">
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">About</a></p>
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Our Shops</a></p>
@@ -14,8 +11,6 @@
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Delivery</a></p>
           </div>
         </div>
-        <!-- End Col -->
-  
         <div>
           <h4 class="font-serif text-xs font-semibold uppercase text-gray-900 dark:text-gray-800">Help</h4>
   
@@ -26,8 +21,6 @@
             <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">Terms</a></p>
           </div>
         </div>
-        <!-- End Col -->
-  
         <div>
           <h4 class="font-serif text-xs font-semibold uppercase text-gray-900 dark:text-gray-800">Get Socials</h4>
   
@@ -79,8 +72,6 @@
             </p>
           </div>
         </div>
-  
-        <!-- End Col -->
       </div>
     </footer>
     <div class="bg-gray-800 px-3 py-4 text-white">

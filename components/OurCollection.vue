@@ -30,7 +30,7 @@
         <ul class="py-1">
           <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 1</a></li>
           <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 2</a></li>
-          <!-- Add more dropdown options as needed -->
+
         </ul>
       </div>
     </div>
